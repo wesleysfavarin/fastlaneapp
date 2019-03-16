@@ -13,6 +13,7 @@
 		042EC2D7223D488500A30564 /* fastlaneapp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 042EC2D5223D488500A30564 /* fastlaneapp.xcdatamodeld */; };
 		042EC2D9223D488700A30564 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 042EC2D8223D488700A30564 /* Assets.xcassets */; };
 		042EC2DC223D488700A30564 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 042EC2DA223D488700A30564 /* LaunchScreen.storyboard */; };
+		CD66B2A981993CCB331441EA /* Pods_fastlaneapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF75AA7238EAE78D0AF78C9E /* Pods_fastlaneapp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,9 @@
 		042EC2D8223D488700A30564 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		042EC2DB223D488700A30564 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		042EC2DD223D488700A30564 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0F818B937F78CC086BF0C3EF /* Pods-fastlaneapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fastlaneapp.release.xcconfig"; path = "Pods/Target Support Files/Pods-fastlaneapp/Pods-fastlaneapp.release.xcconfig"; sourceTree = "<group>"; };
+		8290E000FA9EAD39A56B666E /* Pods-fastlaneapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fastlaneapp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-fastlaneapp/Pods-fastlaneapp.debug.xcconfig"; sourceTree = "<group>"; };
+		AF75AA7238EAE78D0AF78C9E /* Pods_fastlaneapp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fastlaneapp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD66B2A981993CCB331441EA /* Pods_fastlaneapp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,8 @@
 			children = (
 				042EC2CD223D488500A30564 /* fastlaneapp */,
 				042EC2CC223D488500A30564 /* Products */,
+				92BBD3D12902C1376EA6B89C /* Pods */,
+				55ACB23DEDAED9BD5C968FB9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +74,23 @@
 			path = fastlaneapp;
 			sourceTree = "<group>";
 		};
+		55ACB23DEDAED9BD5C968FB9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AF75AA7238EAE78D0AF78C9E /* Pods_fastlaneapp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		92BBD3D12902C1376EA6B89C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8290E000FA9EAD39A56B666E /* Pods-fastlaneapp.debug.xcconfig */,
+				0F818B937F78CC086BF0C3EF /* Pods-fastlaneapp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +98,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 042EC2E0223D488700A30564 /* Build configuration list for PBXNativeTarget "fastlaneapp" */;
 			buildPhases = (
+				0828973056154EA8A36F4BA4 /* [CP] Check Pods Manifest.lock */,
 				042EC2C7223D488500A30564 /* Sources */,
 				042EC2C8223D488500A30564 /* Frameworks */,
 				042EC2C9223D488500A30564 /* Resources */,
+				042EC321223DA5CD00A30564 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -132,6 +158,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		042EC321223DA5CD00A30564 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" d09f4f49afb70368023ee50d4ce376104a59760e 328dbf738449e3c15395016e71c0d6c6031342e2317a0fddd2ff0b4745c31cab\n";
+		};
+		0828973056154EA8A36F4BA4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-fastlaneapp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		042EC2C7223D488500A30564 /* Sources */ = {
@@ -284,6 +352,7 @@
 		};
 		042EC2E1223D488700A30564 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8290E000FA9EAD39A56B666E /* Pods-fastlaneapp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -302,6 +371,7 @@
 		};
 		042EC2E2223D488700A30564 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0F818B937F78CC086BF0C3EF /* Pods-fastlaneapp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -328,7 +398,7 @@
 				042EC2DF223D488700A30564 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		042EC2E0223D488700A30564 /* Build configuration list for PBXNativeTarget "fastlaneapp" */ = {
 			isa = XCConfigurationList;
@@ -337,7 +407,7 @@
 				042EC2E2223D488700A30564 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 
